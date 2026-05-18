@@ -56,6 +56,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```bash
 python evaluate_sart.py
 ```
+> **Not:** `evaluate_sart.py` çalıştırmak için `data/` klasöründe `phantom.npy` ve SART rekonstrüksiyon dosyaları (`.npy`) gereklidir. Bu dosyalar boyutları nedeniyle repoya dahil edilmemiştir. `ann_model.py` ve `ann_pytorch.py` için yalnızca `sart_results.csv` yeterlidir.
 
 ### Scikit-learn modeli
 ```bash
@@ -90,10 +91,6 @@ Giriş (5) → Linear(128) → BatchNorm → ReLU → Dropout(0.2)
 ```
 score = 0.45 × PSNR_norm + 0.45 × SSIM_norm − 0.10 × time_norm
 ```
-
-## Kısıtlar
-
-Sentetik phantom gürültüsüz olduğundan iterasyon-kalite ilişkisi monoton artış göstermektedir. Gerçek klinik veride gürültü amplifikasyonu nedeniyle daha belirgin bir optimum noktası beklenmektedir.
 
 ## Gereksinimler
 
