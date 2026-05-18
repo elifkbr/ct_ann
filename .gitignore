@@ -1,0 +1,21 @@
+# Büyük veri dosyaları
+data/*.npy
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.log
+grid_run.log
+merge_times.py
