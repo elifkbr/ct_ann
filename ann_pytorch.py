@@ -224,7 +224,7 @@ for col, (preset_name, res) in enumerate(best_results.items()):
     c = ax.contourf(iter_range, relax_range, res["ssim"].reshape(100,100), levels=20, cmap="plasma")
     plt.colorbar(c, ax=ax)
     ax.scatter(pdf["iteration"], pdf["relaxation"], c="red", s=15, zorder=5, label="Ölçülen")
-    ax.scatter(g[bs,0], g[bs,1], c="yellow", s=150, marker="*", zorder=6, label="Optimum")
+    ax.scatter(g[bp,0], g[bp,1], c="yellow", s=150, marker="*", zorder=6, label="Optimum")
     ax.set_title(f"SSIM — {preset_name}"); ax.set_xlabel("Iteration"); ax.set_ylabel("Relaxation")
     ax.legend(fontsize=7)
 
